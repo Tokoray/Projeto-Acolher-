@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center pt-2">
+    <div class="col-md-5 text-center">
+        
+        <!-- Logo e Título -->
+        <div class="mb-2">
+            <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo Acolher+" width="200" class="m-0 p-0 logo-login">
+        </div>
+
+        <h4 class="fw-bold mb-2" style="color:#2E60A8;">Crie sua Conta</h4>
+        
+        <!-- Formulário de Cadastro -->
+        <form method="POST">
+            <div class="card-login-azul p-3 text-start shadow">
+                
+                <div class="mb-2">
+                    <label for="nome" class="form-label text-white fw-bold small">Nome Completo</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white text-muted border-0 py-1">👤</span>
+                        <input type="text" class="form-control border-0 py-1" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    <label for="email" class="form-label text-white fw-bold small">Email</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white text-muted border-0 py-1">✉️</span>
+                        <input type="email" class="form-control border-0 py-1" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                </div>
+                
+                <div class="mb-2">
+                    <label for="senha" class="form-label text-white fw-bold small">Senha</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white text-muted border-0 py-1">🔒</span>
+                        <input type="password" class="form-control border-0 py-1" id="senha" name="senha" placeholder="********" required>
+                    </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="{{ url_for('login') }}" class="text-white text-decoration-none small">Já tem uma conta? <u>Faça login</u></a>
+                </div>
+            </div>
+            
+            <!-- Botão Cadastrar -->
+            <div class="mt-2">
+                <button type="submit" class="btn btn-primary-azul w-100 py-2 fw-bold text-white shadow">CADASTRAR</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

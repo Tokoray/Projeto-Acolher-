@@ -1,0 +1,34 @@
+/* Fundo azul escuro arredondado igual ao modelo do Canva */
+.card-login-azul {
+    background-color: #0d47a1; /* Azul forte e acolhedor */
+    border-radius: 25px; /* Bordas bem arredondadas */
+    padding: 30px;
+}
+
+/* Botão ENTRAR grande com bordas arredondadas */
+.btn-primary-azul {
+    background-color: #0d47a1;
+    border: none;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary-azul:hover {
+    background-color: #1565c0;
+}
+
+/* Campos de input mais suaves */
+.input-group .form-control {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.input-group .input-group-text {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.logo-login {
+    mix-blend-mode: multiply; 
+}

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row justify-content-center align-items-center min-vh-100">
+    <div class="col-md-5 text-center">
+        
+        <!-- Logo e Título Bem-vindo -->
+        <div class="mb-4">
+            <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo Acolher+" width="200" class="m-0 p-0 logo-login">
+            <h3 class="fw-bold mb-2" style="color:#2E60A8;">Bem-vindo!</h3>
+        </div>
+        
+        <!-- Formulário com o bloco azul arredondado -->
+        <form method="POST">
+            <div class="card-login-azul p-4 text-start shadow">
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label text-white fw-bold">Email</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control border-0 py-2" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="senha" class="form-label text-white fw-bold">Senha</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control border-0 py-2" id="senha" name="senha" placeholder="********" required>
+                    </div>
+                </div>
+
+                <!-- Opções extras alinhadas -->
+                <div class="d-flex justify-content-between align-items-center mb-3 text-white px-1">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="lembrar">
+                        <label class="form-check-label small" for="lembrar">Lembrar de mim</label>
+                    </div>
+                    <a href="#" class="text-white text-decoration-none small">Esqueceu a senha?</a>
+                </div>
+
+                <div class="text-center mt-2">
+                    <a href="{{ url_for('cadastrar') }}" class="text-white text-decoration-none small">Não tem conta? <u>Cadastre-se</u></a>
+                </div> 
+            </div>
+            
+            <!-- Botão Entrar Grande Externo ao bloco azul -->
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary-azul w-100 py-3 fw-bold text-white shadow rounded-pill">ENTRAR</button>
+            </div>
+        </form>
+
+        <!-- Divisor opcional para login social -->
+        <div class="text-center text-muted my-3 small">ou entre com</div>
+
+        <!-- Ícones sociais redondos (Google e Facebook) conectados às rotas -->
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{{ url_for('login_google') }}" class="btn btn-light border shadow-sm rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 60px; height: 60px;">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.19v3.15C3.17 21.32 7.22 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.19C.43 8.1 0 9.98 0 12s.43 3.9 1.19 5.42l4.09-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.22 0 3.17 2.68 1.19 6.58l4.09 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+            </a>
+            <a href="{{ url_for('login_facebook') }}" class="btn btn-light border shadow-sm rounded-circle d-flex align-items-center justify-content-center text-decoration-none" style="width: 60px; height: 60px;">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#1877F2" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
