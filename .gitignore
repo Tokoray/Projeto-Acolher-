@@ -1,0 +1,17 @@
+# Banco de dados com os dados dos usuários
+database.db
+
+# Cache que o Python gera sozinho
+__pycache__/
+*.pyc
+
+# Ambiente virtual (caso você crie um)
+venv/
+.venv/
+
+# Arquivo de variáveis secretas (caso você use depois)
+.env
+
+# Configurações do editor
+.vscode/
+.idea/

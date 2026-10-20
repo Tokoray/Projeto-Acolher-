@@ -8,7 +8,11 @@
             <img src="{{ url_for('static', filename='img/logo.jpg') }}" alt="Logo Acolher+" width="200" class="m-0 p-0 logo-login">
             <h3 class="fw-bold mb-2" style="color:#2E60A8;">Bem-vindo!</h3>
         </div>
-        
+        {% with mensagens = get_flashed_messages() %}
+  {% for mensagem in mensagens %}
+    <p>{{ mensagem }}</p>
+  {% endfor %}
+{% endwith %}
         <!-- Formulário com o bloco azul arredondado -->
         <form method="POST">
             <div class="card-login-azul p-4 text-start shadow">

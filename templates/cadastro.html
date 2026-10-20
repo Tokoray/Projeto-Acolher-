@@ -9,7 +9,11 @@
         </div>
 
         <h4 class="fw-bold mb-2" style="color:#2E60A8;">Crie sua Conta</h4>
-        
+        {% with mensagens = get_flashed_messages() %}
+  {% for mensagem in mensagens %}
+    <p>{{ mensagem }}</p>
+  {% endfor %}
+{% endwith %}
         <!-- Formulário de Cadastro -->
         <form method="POST">
             <div class="card-login-azul p-3 text-start shadow">
